@@ -1,22 +1,37 @@
 import React from 'react';
 import './app.scss';
 import Template from './components/template/Template.js';
-import Heading from './components/heading/Heading.js';
-import Subheading from './components/subheading/Subheading.js';
-import Description from './components/description/Description.js';
+import { BrowserRouter, Route} from "react-router-dom";
+import { AnimatedSwitch } from 'react-router-transition';
+import Home from './components/home/Home.js';
+import Names from './components/names/NamesContainer.js';
+import {ThemeProvider, createMuiTheme} from '@material-ui/core/styles';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#c71585'
+    }
+  },
+});
 
 function App() {
   return (
-    <Template>
-      <Heading text="kreator zaproszeń ślubnych online" />
-      <Subheading text="Stwórzcie zaproszenia ślubne i pobierzcie w formacie pdf" />
-      <Description>
-        <p>Przygotowania do ślubu wymagają dużo czasu, poświęcenia i wydatków. W końcu każda para młoda chce, by ten dzień był wyjątkowy. Ponieważ z pewnością przed Wami dużo przygotowań, warto ułatwić sobie zadanie i zaoszczędzić czas i pieniądze tam, gdzie to możliwe</p>
-        <p>Kreator zaproszeń ślubnych pomoże Wam przygotować zaproszenia na ślub za darmo i w stosunkowo krótkim czasie (choć to oczywiście zależy od liczby gości).</p>
-        <p>Wystarczy, że wypełnicie kolejne pola kreatora a na koniec pobierzecie pdf z gotowymi zaproszeniami.</p>
-        <p>Następnie wystarczy wydrukować zaproszenia na ładnym papierze i gotowe!</p>
-      </Description>
-    </Template>
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <Template>
+          <AnimatedSwitch
+             atEnter={{ opacity: 0 }}
+             atLeave={{ opacity: 0 }}
+             atActive={{ opacity: 1 }}
+             className='switch-wrapper'
+           >
+            <Route exact path='/' component={Home} />
+            <Route exact path='/imiona' component={Names} />
+          </AnimatedSwitch>
+        </Template>
+      </ThemeProvider>
+    </BrowserRouter>
   );
 }
 

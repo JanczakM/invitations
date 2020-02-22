@@ -1,1 +1,26 @@
 @import '../../settings.scss';
+
+.next {
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  background-color: $primary-color;
+  padding: 15px 20px;
+  animation-fill-mode: backwards;
+  animation-name: nextb;
+  animation-duration: 2s;
+
+  &:hover {
+    background-color: purple;
+  }
+
+  &-container {
+    text-align: center;
+    padding: 40px;
+  }
+}
+
+@keyframes nextb {
+  from { background-color: white; }
+  to { background-color: $primary-color; }
+}

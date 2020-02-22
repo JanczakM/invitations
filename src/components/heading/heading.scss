@@ -7,11 +7,4 @@ h1 {
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  animation-name: color;
-  animation-duration: 3s;
-}
-
-@keyframes color {
-  from { color: transparent; }
-  to { color: $primary-color; }
 }

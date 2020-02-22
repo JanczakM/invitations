@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './description.scss';
 
 const Description = ({children}) => (
-  <div>{children}</div>
+  <div className='description'>{children}</div>
 )
 
 Description.propTypes = {

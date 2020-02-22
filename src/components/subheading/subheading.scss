@@ -2,13 +2,4 @@
 
 h2 {
   font-size: 30px;
-  animation-fill-mode: backwards;
-  animation-name: subcolor;
-  animation-duration: 3s;
-  animation-delay: 1s;
-}
-
-@keyframes subcolor {
-  from { color: white; }
-  to { color: $secondary-color; }
 }

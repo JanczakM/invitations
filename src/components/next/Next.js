@@ -1,9 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './next.scss';
+import {Link} from 'react-router-dom';
 
 const Next = ({text, path}) => (
-  <a href={path}>{text}</a>
+  <div className='next-container'>
+    <Link to={path} className='next'>{text}</Link>
+  </div>
 )
 
 Next.propTypes = {
