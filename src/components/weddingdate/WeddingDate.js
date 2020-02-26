@@ -29,34 +29,44 @@ class WeddingDate extends React.Component {
           <p>Poniżej podaj datę i godzinę ślubu</p>
         </Description>
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
-          <Grid container justify="space-around">
-            <KeyboardDatePicker
-              disableToolbar
-              variant="inline"
-              format="dd/MM/yyyy"
-              margin="normal"
-              id="date-picker-inline"
-              label="Data ślubu"
-              value={date}
-              onChange={addDate}
-              KeyboardButtonProps={{
-                'aria-label': 'change date',
-              }}
-            />
-            <KeyboardTimePicker
-              margin="normal"
-              id="time-picker"
-              label="Godzina ślubu"
-              ampm={false}
-              value={time}
-              onChange={addTime}
-              KeyboardButtonProps={{
-                'aria-label': 'change time',
-              }}
-            />
+          <Grid container justify="center" spacing={3}>
+            <Grid item >
+              <KeyboardDatePicker
+                disableToolbar
+                format="dd/MM/yyyy"
+                margin="normal"
+                id="date-picker-inline"
+                label="Data ślubu"
+                value={date}
+                onChange={addDate}
+                KeyboardButtonProps={{
+                  'aria-label': 'change date',
+                }}
+              />
+              </Grid>
+              <Grid item >
+                <KeyboardTimePicker
+                  margin="normal"
+                  id="time-picker"
+                  label="Godzina ślubu"
+                  ampm={false}
+                  value={time}
+                  onChange={addTime}
+                  KeyboardButtonProps={{
+                    'aria-label': 'change time',
+                  }}
+                />
+              </Grid>
           </Grid>
         </MuiPickersUtilsProvider>
-        <Next text='Dalej'/>
+        <Grid container spacing={3} justify='center'>
+          <Grid item >
+            <Next text='Wstecz' path='/imiona' type='prev'/>
+          </Grid>
+          <Grid item >
+            <Next text='Dalej' path='/miejsce-slubu'/>
+          </Grid>
+        </Grid>
       </div>
     )
   }

@@ -4,6 +4,7 @@ import Subheading from '../subheading/Subheading.js';
 import Next from '../next/Next.js';
 import Description from '../description/Description.js';
 import TextField from '@material-ui/core/TextField';
+import Grid from '@material-ui/core/Grid';
 
 class Names extends React.Component {
 
@@ -20,8 +21,15 @@ class Names extends React.Component {
         <Description>
           <p>Poniżej podaj imię i nazwisko pana młodego oraz imię i nazwisko panny młodej. Możesz też podać same imiona. Wybór formy zaproszenia należy do Ciebie. </p><p>Przykładowo: Jan Kowalski i Anna Kowalska</p><p>Dane będą użyte tylko do wygenerowania zaproszeń. Nie są przechowywane przez aplikację po jej zamknięciu</p>
         </Description>
-        <TextField id="outlined-basic" label="Imię i nazwisko pana młodego i panny młodej" variant="outlined" value={groomNames} fullWidth onChange={event => addGroomNames(event.target.value)} />
-        <Next text='Dalej' path='/termin-slubu'/>
+        <TextField id="outlined-basic" label="Imię i nazwisko pana młodego i panny młodej" variant="outlined" value={groomNames} style={{ width: 500 }} onChange={event => addGroomNames(event.target.value)} />
+        <Grid container spacing={3} justify='center'>
+          <Grid item >
+            <Next text='Wstecz' path='/czcionka' type='prev'/>
+          </Grid>
+          <Grid item >
+            <Next text='Dalej' path='/termin-slubu'/>
+          </Grid>
+        </Grid>
       </div>
     )
   }

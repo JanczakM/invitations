@@ -1,7 +1,14 @@
 @import '../../settings.scss';
 
+.MuiGrid-container {
+  margin-top: 30px !important;
+}
+
 .next {
   font-size: 20px;
+  display: inline-block;
+  min-width: 70px;
+  text-align: center;
   text-decoration: none;
   color: white;
   background-color: $primary-color;
@@ -13,11 +20,6 @@
   &:hover {
     background-color: purple;
   }
-
-  &-container {
-    text-align: center;
-    padding: 40px;
-  }
 }
 
 @keyframes nextb {
@@ -27,6 +29,9 @@
 
 .prev {
   font-size: 20px;
+  min-width: 70px;
+  display: inline-block;
+  text-align: center;
   text-decoration: none;
   color: white;
   background-color: $secondary-color;
@@ -36,12 +41,7 @@
   animation-duration: 2s;
 
   &:hover {
-    background-color: purple;
-  }
-
-  &-container {
-    text-align: center;
-    padding: 40px;
+    background-color: #333;
   }
 }
 

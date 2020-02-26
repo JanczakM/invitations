@@ -2,6 +2,7 @@ import React from 'react';
 import Subheading from '../subheading/Subheading.js';
 import Description from '../description/Description.js';
 import Next from '../next/Next.js';
+import Grid from '@material-ui/core/Grid';
 
 const Home = () => (
   <div>
@@ -12,7 +13,11 @@ const Home = () => (
       <p>Wystarczy, że wypełnicie kolejne pola kreatora a na koniec pobierzecie pdf z gotowymi zaproszeniami.</p>
       <p>Następnie wystarczy wydrukować zaproszenia na ładnym papierze i gotowe!</p>
     </Description>
-    <Next text='Rozpocznij'path='/imiona'/>
+    <Grid container spacing={3} justify='center'>
+      <Grid item >
+        <Next text='Rozpocznij' path='/czcionka'/>
+      </Grid>
+    </Grid>
   </div>
 )
 
