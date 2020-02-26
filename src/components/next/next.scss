@@ -24,3 +24,28 @@
   from { background-color: white; }
   to { background-color: $primary-color; }
 }
+
+.prev {
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  background-color: $secondary-color;
+  padding: 15px 20px;
+  animation-fill-mode: backwards;
+  animation-name: prevb;
+  animation-duration: 2s;
+
+  &:hover {
+    background-color: purple;
+  }
+
+  &-container {
+    text-align: center;
+    padding: 40px;
+  }
+}
+
+@keyframes prevb {
+  from { background-color: white; }
+  to { background-color: $secondary-color; }
+}

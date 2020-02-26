@@ -5,6 +5,7 @@ import { BrowserRouter, Route} from "react-router-dom";
 import { AnimatedSwitch } from 'react-router-transition';
 import Home from './components/home/Home.js';
 import Names from './components/names/NamesContainer.js';
+import WeddingDate from './components/weddingdate/WeddingDateContainer.js';
 import {ThemeProvider, createMuiTheme} from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
@@ -28,6 +29,7 @@ function App() {
            >
             <Route exact path='/' component={Home} />
             <Route exact path='/imiona' component={Names} />
+            <Route exact path='/termin-slubu' component={WeddingDate} />
           </AnimatedSwitch>
         </Template>
       </ThemeProvider>

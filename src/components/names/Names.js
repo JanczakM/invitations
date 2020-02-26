@@ -21,7 +21,7 @@ class Names extends React.Component {
           <p>Poniżej podaj imię i nazwisko pana młodego oraz imię i nazwisko panny młodej. Możesz też podać same imiona. Wybór formy zaproszenia należy do Ciebie. </p><p>Przykładowo: Jan Kowalski i Anna Kowalska</p><p>Dane będą użyte tylko do wygenerowania zaproszeń. Nie są przechowywane przez aplikację po jej zamknięciu</p>
         </Description>
         <TextField id="outlined-basic" label="Imię i nazwisko pana młodego i panny młodej" variant="outlined" value={groomNames} fullWidth onChange={event => addGroomNames(event.target.value)} />
-        <Next text='Dalej'/>
+        <Next text='Dalej' path='/termin-slubu'/>
       </div>
     )
   }

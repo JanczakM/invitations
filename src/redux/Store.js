@@ -1,13 +1,15 @@
 import {combineReducers, createStore} from 'redux';
 
 import groomNamesReducer from './GroomNamesReducer';
+import weddingReducer from './WeddingReducer';
 
 const initialState = {
   template: '',
   font: '',
   groomNames: '',
   wedding: {
-    time: '',
+    date: Date(),
+    time: Date(),
     place: '',
     street: '',
     city: ''
@@ -31,7 +33,8 @@ const initialState = {
 }
 
 const reducers = {
-  groomNames: groomNamesReducer
+  groomNames: groomNamesReducer,
+  wedding: weddingReducer
 };
 
 Object.keys(initialState).forEach(item => {
