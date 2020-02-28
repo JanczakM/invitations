@@ -36,7 +36,7 @@ class Font extends React.Component {
 
         <Grid container spacing={3} justify='center'>
           <Grid item >
-            <Next text='Wstecz' path='/' type='prev'/>
+            <Next text='Wstecz' path='/tlo' type='prev'/>
           </Grid>
           <Grid item >
             <Next text='Dalej' path='/imiona'/>

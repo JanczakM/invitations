@@ -1,0 +1,13 @@
+@import '../../settings.scss';
+
+.MuiFormControlLabel-root {
+  margin-left: 0 !important;
+}
+
+.bcg-img {
+  width: 200px;
+}
+
+.Mui-checked ~ span img {
+  border: 3px solid $primary-color;
+}

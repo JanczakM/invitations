@@ -7,6 +7,7 @@ import Home from './components/home/Home.js';
 import Names from './components/names/NamesContainer.js';
 import WeddingDate from './components/weddingdate/WeddingDateContainer.js';
 import WeddingPlace from './components/weddingplace/WeddingPlaceContainer.js';
+import Background from './components/background/BackgroundContainer.js';
 import Font from './components/font/FontContainer.js';
 import {ThemeProvider, createMuiTheme} from '@material-ui/core/styles';
 
@@ -30,6 +31,7 @@ function App() {
              className='switch-wrapper'
            >
             <Route exact path='/' component={Home} />
+            <Route exact path='/tlo' component={Background} />
             <Route exact path='/czcionka' component={Font} />
             <Route exact path='/imiona' component={Names} />
             <Route exact path='/termin-slubu' component={WeddingDate} />

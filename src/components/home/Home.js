@@ -15,7 +15,7 @@ const Home = () => (
     </Description>
     <Grid container spacing={3} justify='center'>
       <Grid item >
-        <Next text='Rozpocznij' path='/czcionka'/>
+        <Next text='Rozpocznij' path='/tlo'/>
       </Grid>
     </Grid>
   </div>
