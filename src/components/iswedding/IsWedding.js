@@ -27,8 +27,8 @@ class Font extends React.Component {
 
         <FormControl component="fieldset">
           <RadioGroup aria-label="wesele" name="isWedding" value={isWedding} onChange={event => addIsWedding(event.target.value)}>
-            <FormControlLabel value="true" control={<Radio color='primary'/>} label='tak' />
-            <FormControlLabel value="false" control={<Radio color='primary'/>} label='nie' />
+            <FormControlLabel value='true' control={<Radio color='primary'/>} label='tak' />
+            <FormControlLabel value='false' control={<Radio color='primary'/>} label='nie' />
           </RadioGroup>
         </FormControl>
 
@@ -37,7 +37,7 @@ class Font extends React.Component {
             <Next text='Wstecz' path='/miejsce-slubu' type='prev'/>
           </Grid>
           <Grid item >
-            <Next text='Dalej' path='/wesele'/>
+            <Next text='Dalej' path={isWedding === 'true' ? '/wesele' : '/info'}/>
           </Grid>
         </Grid>
       </div>

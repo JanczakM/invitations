@@ -19,19 +19,14 @@ const initialState = {
     city: ''
   },
   weddingParty: {
-    is: '',
-    date: '',
-    time: '',
+    is: 'true',
     place: '',
     street: '',
     city: ''
   },
-  guests: [],
   contact: {
-    brideTel: '',
-    brideMail: '',
-    groomTel: '',
-    groomMail: ''
+    bride: '',
+    groom: '',
   },
   info: ''
 }
