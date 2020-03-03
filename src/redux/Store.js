@@ -3,6 +3,7 @@ import {combineReducers, createStore} from 'redux';
 import groomNamesReducer from './GroomNamesReducer';
 import weddingReducer from './WeddingReducer';
 import visualReducer from './VisualReducer';
+import weddingPartyReducer from './WeddingPartyReducer';
 
 const initialState = {
   visual: {
@@ -38,7 +39,8 @@ const initialState = {
 const reducers = {
   groomNames: groomNamesReducer,
   wedding: weddingReducer,
-  visual: visualReducer
+  visual: visualReducer,
+  weddingParty: weddingPartyReducer
 };
 
 Object.keys(initialState).forEach(item => {
