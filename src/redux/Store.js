@@ -4,6 +4,7 @@ import groomNamesReducer from './GroomNamesReducer';
 import weddingReducer from './WeddingReducer';
 import visualReducer from './VisualReducer';
 import weddingPartyReducer from './WeddingPartyReducer';
+import infoReducer from './InfoReducer';
 
 const initialState = {
   visual: {
@@ -24,10 +25,6 @@ const initialState = {
     street: '',
     city: ''
   },
-  contact: {
-    bride: '',
-    groom: '',
-  },
   info: ''
 }
 
@@ -35,7 +32,8 @@ const reducers = {
   groomNames: groomNamesReducer,
   wedding: weddingReducer,
   visual: visualReducer,
-  weddingParty: weddingPartyReducer
+  weddingParty: weddingPartyReducer,
+  info: infoReducer
 };
 
 Object.keys(initialState).forEach(item => {
