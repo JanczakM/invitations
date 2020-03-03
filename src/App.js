@@ -12,6 +12,7 @@ import Font from './components/font/FontContainer.js';
 import IsWedding from './components/iswedding/IsWeddingContainer.js';
 import WeddingParty from './components/weddingparty/WeddingPartyContainer.js';
 import Info from './components/info/InfoContainer.js';
+import Preview from './components/preview/PreviewContainer.js';
 import {ThemeProvider, createMuiTheme} from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
@@ -42,6 +43,7 @@ function App() {
             <Route exact path='/czy-wesele' component={IsWedding} />
             <Route exact path='/wesele' component={WeddingParty} />
             <Route exact path='/info' component={Info} />
+            <Route exact path='/podglad' component={Preview} />
           </AnimatedSwitch>
         </Template>
       </ThemeProvider>
