@@ -32,9 +32,9 @@ class Font extends React.Component {
 
         <FormControl component="fieldset" fullWidth>
           <RadioGroup aria-label="tło" name="bcg" value={bcg} row style={{justifyContent: 'space-around'}} onChange={event => addBcg(event.target.value)}>
-            <FormControlLabel value="/bcg1.jpg" control={<Radio style={{display: 'none'}}/>} label={<img src={bcg1} alt='invitation background' className='bcg-img'/>} />
-            <FormControlLabel value="/bcg2.png" control={<Radio style={{display: 'none'}}/>} label={<img src={bcg2} alt='invitation background' className='bcg-img'/>} />
-            <FormControlLabel value="/bcg3.png" control={<Radio style={{display: 'none'}}/>} label={<img src={bcg3} alt='invitation background' className='bcg-img'/>}  />
+            <FormControlLabel value="https://i.postimg.cc/CxWPscr5/bcg1.jpg" control={<Radio style={{display: 'none'}}/>} label={<img src={bcg1} alt='invitation background' className='bcg-img'/>} />
+            <FormControlLabel value="https://i.postimg.cc/ZYvH7XC4/bcg2.png" control={<Radio style={{display: 'none'}}/>} label={<img src={bcg2} alt='invitation background' className='bcg-img'/>} />
+            <FormControlLabel value="https://i.postimg.cc/9MRdkqXJ/bcg3.png" control={<Radio style={{display: 'none'}}/>} label={<img src={bcg3} alt='invitation background' className='bcg-img'/>}  />
           </RadioGroup>
         </FormControl>
 

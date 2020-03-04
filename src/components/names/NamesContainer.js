@@ -1,14 +1,20 @@
 import {connect} from 'react-redux';
 import Names from './Names';
-import {createAction_addGroomNames} from '../../redux/GroomNamesReducer';
+import {createAction_addGroomNamesShe, createAction_addGroomNamesHe} from '../../redux/GroomNamesReducer';
 import {getGroomNames} from '../../redux/GroomNamesReducer';
 
 const mapStateToProps = (state, props) => ({
-  groomNames: getGroomNames(state.groomNames)
+  groomNames: {
+    she: getGroomNames(state.groomNames.she),
+    he: getGroomNames(state.groomNames.he)
+  }
 });
 
 const mapDispatchToProps = (dispatch, props) => ({
-  addGroomNames: groomNames => dispatch(createAction_addGroomNames(groomNames))
+  addGroomNames: {
+    she: name => dispatch(createAction_addGroomNamesShe({she: name})),
+    he: name => dispatch(createAction_addGroomNamesHe({he: name})),
+  }
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Names);

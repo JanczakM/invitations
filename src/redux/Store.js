@@ -8,24 +8,27 @@ import infoReducer from './InfoReducer';
 
 const initialState = {
   visual: {
-    template: 'bcg3.png',
-    font: 'Courgette'
+    template: 'https://i.postimg.cc/CxWPscr5/bcg1.jpg',
+    font: 'Marck Script'
   },
-  groomNames: 'Gosia i Kuba',
+  groomNames: {
+    she: 'Anna Luberadzka-Kamińska',
+    he: 'Sebastian Szczepaniak'
+  },
   wedding: {
     date: Date(),
     time: Date(),
-    place: 'USC Warszawa-Wilanów',
-    street: 'Batuty 135',
-    city: 'Warszawa'
+    place: 'A',
+    street: 'A',
+    city: 'A'
   },
   weddingParty: {
     is: 'true',
     place: 'Restauracja ABC',
-    street: 'atuty 135',
+    street: 'Krotoszyńska',
     city: 'Warszawa'
   },
-  info: 'Tu znajdą się dodatkowe informacje. Lorem i psum, .oinoinl.oinonoin. oinoijoij. kkkkk. jinin'
+  info: 'abc'
 }
 
 const reducers = {

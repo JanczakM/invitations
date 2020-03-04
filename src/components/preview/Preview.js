@@ -3,18 +3,43 @@ import { Page, Text, View, Document, StyleSheet, PDFViewer, Font, Image} from '@
 import Grid from '@material-ui/core/Grid';
 import Next from '../next/Next.js';
 import courgette from './Courgette-Regular.ttf';
-import lobster from './Kalam-Regular.ttf';
+import marc from './MarckScript-Regular.ttf';
 import margarine from './Margarine-Regular.ttf';
 
 function Invitation(props){
 
-  Font.register({ family: 'Lobster', src: lobster });
+  Font.register({ family: 'Marck Script', src: marc });
   Font.register({ family: 'Courgette', src: courgette });
   Font.register({ family: 'Margarine', src: margarine });
+
+  const wDate = new Date(props.weddingDate).toLocaleDateString();
+  const wTime = new Date(props.weddingTime).toLocaleTimeString().slice(0, 5);
 
   const styles = StyleSheet.create({
     page: {
       fontFamily: props.font,
+      textAlign: 'center',
+      fontSize: '15'
+    },
+    names: {
+      fontSize: '30',
+    },
+    mt: {
+      marginTop: '50px'
+    },
+    mb: {
+      marginBottom: '30px'
+    },
+    wed: {
+      fontSize: '40',
+      marginTop: '20px',
+      marginBottom: '20px'
+    },
+    section: {
+      marginTop: '20px',
+    },
+    underlined: {
+      textDecoration: 'underline'
     },
     pageBackground: {
       position: 'absolute',
@@ -29,24 +54,28 @@ function Invitation(props){
   return (
     <Document>
       <Page size="A4" style={styles.page}>
-      <Image src={props.background} style={styles.pageBackground} />
+        <Image src={props.background} style={styles.pageBackground} />
         <View>
-          <Text>{props.names}</Text>
-          <Text>mają zaszczyt zaprosić na swój</Text>
-          <Text>Ślub,</Text>
+          <Text style={[styles.names, styles.mt]}>{props.she}</Text>
+          <Text>oraz</Text>
+          <Text style={[styles.names, styles.mb]}>{props.he}</Text>
+          <Text style={styles.mb}>mają zaszczyt zaprosić</Text>
+          <Text style={styles.mb}>_______________________________________</Text>
+          <Text>na swój</Text>
+          <Text style={styles.wed}>Ślub</Text>
           <Text>który odbędzie się</Text>
-          <Text>{props.weddingDate}</Text>
-          <Text>o godzinie {props.weddingTime}</Text>
-          <Text>Miejsce ślubu:</Text>
+          <Text>{wDate} r.</Text>
+          <Text>o godzinie {wTime}</Text>
+          <Text style={[styles.section, styles.underlined]}>Miejsce ślubu:</Text>
           <Text>{props.weddingPlace}</Text>
           <Text>{props.weddingStreet}</Text>
           <Text>{props.weddingCity}</Text>
-          <Text>Państwo młodzi zapraszają również na wesele</Text>
-          <Text>Miejsce wesela:</Text>
+          <Text style={styles.section}>Państwo młodzi zapraszają również na wesele</Text>
+          <Text style={[styles.section, styles.underlined]}>Miejsce wesela:</Text>
           <Text>{props.weddingPartyPlace}</Text>
           <Text>{props.weddingPartyStreet}</Text>
           <Text>{props.weddingPartyCity}</Text>
-          <Text>{props.info}</Text>
+          <Text style={styles.section}>{props.info}</Text>
         </View>
       </Page>
     </Document>
@@ -54,14 +83,14 @@ function Invitation(props){
 };
 
 export const Preview = (props) => (
-  <>
-  <PDFViewer>
-    <Invitation {...props}/>
-  </PDFViewer>
-  <Grid container spacing={3} justify='center'>
-    <Grid item >
-      <Next text='Wstecz' path='/info' type='prev'/>
+  <div>
+    <PDFViewer style={{width: '500px', height: '800px'}}>
+      <Invitation {...props}/>
+    </PDFViewer>
+    <Grid container spacing={3} justify='center'>
+      <Grid item >
+        <Next text='Wstecz' path='/info' type='prev'/>
+      </Grid>
     </Grid>
-  </Grid>
-  </>
+  </div>
 );
