@@ -28,8 +28,8 @@ class Font extends React.Component {
 
         <FormControl component="fieldset">
           <RadioGroup aria-label="czionka" name="font" value={font} onChange={event => addFont(event.target.value)}>
-            <FormControlLabel value="Lobster" control={<Radio color='primary'/>} label={<span style={{ fontFamily: 'Lobster', ...size }}>Zaproszenie na ślub</span>} />
-            <FormControlLabel value="Caveat" control={<Radio color='primary'/>} label={<span style={{ fontFamily: 'Caveat', ...size }}>Zaproszenie na ślub</span>} />
+            <FormControlLabel value="Kalam" control={<Radio color='primary'/>} label={<span style={{ fontFamily: 'Kalam', ...size }}>Zaproszenie na ślub</span>} />
+            <FormControlLabel value="Margarine" control={<Radio color='primary'/>} label={<span style={{ fontFamily: 'Margarine', ...size }}>Zaproszenie na ślub</span>} />
             <FormControlLabel value="Courgette" control={<Radio color='primary'/>} label={<span style={{ fontFamily: 'Courgette', ...size }}>Zaproszenie na ślub</span>} />
           </RadioGroup>
         </FormControl>

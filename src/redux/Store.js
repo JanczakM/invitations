@@ -8,24 +8,24 @@ import infoReducer from './InfoReducer';
 
 const initialState = {
   visual: {
-    template: '',
-    font: ''
+    template: 'bcg3.png',
+    font: 'Courgette'
   },
-  groomNames: '',
+  groomNames: 'Gosia i Kuba',
   wedding: {
     date: Date(),
     time: Date(),
-    place: '',
-    street: '',
-    city: ''
+    place: 'USC Warszawa-Wilanów',
+    street: 'Batuty 135',
+    city: 'Warszawa'
   },
   weddingParty: {
     is: 'true',
-    place: '',
-    street: '',
-    city: ''
+    place: 'Restauracja ABC',
+    street: 'atuty 135',
+    city: 'Warszawa'
   },
-  info: ''
+  info: 'Tu znajdą się dodatkowe informacje. Lorem i psum, .oinoinl.oinonoin. oinoijoij. kkkkk. jinin'
 }
 
 const reducers = {
