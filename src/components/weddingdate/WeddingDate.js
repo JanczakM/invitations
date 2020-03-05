@@ -15,8 +15,22 @@ import {
 class WeddingDate extends React.Component {
 
   static propTypes = {
-    date: PropTypes.string,
-    time: PropTypes.string
+    date: PropTypes.instanceOf(Date),
+    time: PropTypes.instanceOf(Date)
+  }
+
+  errors = {
+    date: {
+      error: false
+    },
+    time: {
+      error: false
+    }
+  }
+
+  setErrors(date, time){
+    date ? this.errors.date.error = false : this.errors.date.error = true
+    time ? this.errors.time.error = false : this.errors.time.error = true
   }
 
   render() {
@@ -32,6 +46,7 @@ class WeddingDate extends React.Component {
           <Grid container justify="center" spacing={3}>
             <Grid item >
               <KeyboardDatePicker
+                {...this.errors.date}
                 disableToolbar
                 format="dd/MM/yyyy"
                 margin="normal"
@@ -42,10 +57,13 @@ class WeddingDate extends React.Component {
                 KeyboardButtonProps={{
                   'aria-label': 'change date',
                 }}
+                helperText='Pole wymagane'
+                required
               />
               </Grid>
               <Grid item >
                 <KeyboardTimePicker
+                  {...this.errors.time}
                   margin="normal"
                   id="time-picker"
                   label="Godzina ślubu"
@@ -55,6 +73,8 @@ class WeddingDate extends React.Component {
                   KeyboardButtonProps={{
                     'aria-label': 'change time',
                   }}
+                  helperText='Pole wymagane'
+                  required
                 />
               </Grid>
           </Grid>
@@ -63,8 +83,8 @@ class WeddingDate extends React.Component {
           <Grid item >
             <Next text='Wstecz' path='/imiona' type='prev'/>
           </Grid>
-          <Grid item >
-            <Next text='Dalej' path='/miejsce-slubu'/>
+          <Grid item onClick={this.setErrors(date, time)}>
+            {date && time ? <Next text='Dalej' path='/miejsce-slubu'/> : <Next text='Dalej' path='/termin-slubu' />}
           </Grid>
         </Grid>
       </div>

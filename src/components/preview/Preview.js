@@ -54,7 +54,7 @@ function Invitation(props){
   return (
     <Document>
       <Page size="A4" style={styles.page}>
-        <Image src={props.background} style={styles.pageBackground} />
+        {props.background ? <Image src={props.background} style={styles.pageBackground} /> : <Text></Text>}
         <View>
           <Text style={[styles.names, styles.mt]}>{props.she}</Text>
           <Text>oraz</Text>
@@ -67,9 +67,9 @@ function Invitation(props){
           <Text>{wDate} r.</Text>
           <Text>o godzinie {wTime}</Text>
           <Text style={[styles.section, styles.underlined]}>Miejsce ślubu:</Text>
-          <Text>{props.weddingPlace}</Text>
-          <Text>{props.weddingStreet}</Text>
-          <Text>{props.weddingCity}</Text>
+          {props.weddingPlace ? <Text>{props.weddingPlace}</Text> : <Text></Text>}
+          {props.weddingStreet ? <Text>{props.weddingStreet}</Text> : <Text></Text>}
+          {props.weddingCity ? <Text>{props.weddingCity}</Text> : <Text></Text>}
           <Text style={styles.section}>Państwo młodzi zapraszają również na wesele</Text>
           <Text style={[styles.section, styles.underlined]}>Miejsce wesela:</Text>
           <Text>{props.weddingPartyPlace}</Text>

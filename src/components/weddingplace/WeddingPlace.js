@@ -14,6 +14,15 @@ class WeddingPlace extends React.Component {
     city: PropTypes.string
   };
 
+  state = {
+    display: 'none',
+    color: 'red'
+  }
+
+  setMessage(place, street, city){
+    (!place && !street && !city) ? this.setState({display: 'block'}) : this.setState({display: 'none'});
+  }
+
   render() {
     const {place, street, city, addPlace, addStreet, addCity} = this.props;
 
@@ -21,25 +30,44 @@ class WeddingPlace extends React.Component {
       <div>
         <Subheading text="Miejsce ślubu" />
         <Description>
-          <p>Poniżej podaj miejsce (czyli konkretny Kościół lub Urząd Stanu Cywilnego), ulicę oraz miejscowość w której odbędzie się ślub</p>
+          <p>Poniżej podaj miejsce (czyli konkretny Kościół lub Urząd Stanu Cywilnego), ulicę oraz miejscowość w której odbędzie się ślub</p><p>Conajmniej jedno pole powinno być wypełnione</p>
         </Description>
         <Grid container spacing={3} justify='center'>
           <Grid item>
-            <TextField id="outlined-basic" label="miejsce ślubu" variant="outlined" value={place} onChange={event => addPlace(event.target.value)} />
+            <TextField
+              id="outlined-basic"
+              label="miejsce ślubu"
+              variant="outlined"
+              value={place}
+              onChange={event => {addPlace(event.target.value); this.setState({display: 'none'})}}
+            />
           </Grid>
           <Grid item>
-            <TextField id="outlined-basic" label="ulica" variant="outlined" value={street} onChange={event => addStreet(event.target.value)} />
+            <TextField
+              id="outlined-basic"
+              label="ulica"
+              variant="outlined"
+              value={street}
+              onChange={event => {addStreet(event.target.value); this.setState({display: 'none'})}}
+            />
           </Grid>
           <Grid item>
-            <TextField id="outlined-basic" label="miejscowość" variant="outlined" value={city} onChange={event => addCity(event.target.value)} />
+            <TextField
+              id="outlined-basic"
+              label="miejscowość"
+              variant="outlined"
+              value={city}
+              onChange={event => {addCity(event.target.value); this.setState({display: 'none'})}}
+            />
           </Grid>
+          <p style={this.state}>wypełnij przynajmniej jedno pole</p>
         </Grid>
         <Grid container spacing={3} justify='center'>
           <Grid item >
             <Next text='Wstecz' path='/termin-slubu' type='prev'/>
           </Grid>
-          <Grid item >
-            <Next text='Dalej' path='/czy-wesele'/>
+          <Grid item onClick={() => this.setMessage(place, street, city)}>
+            {(place || street || city) ? <Next text='Dalej' path='/czy-wesele'/> : <Next text='Dalej' path='/miejsce-slubu'/>}
           </Grid>
         </Grid>
       </div>

@@ -8,19 +8,19 @@ import infoReducer from './InfoReducer';
 
 const initialState = {
   visual: {
-    template: 'https://i.postimg.cc/CxWPscr5/bcg1.jpg',
+    template: '',
     font: 'Marck Script'
   },
   groomNames: {
-    she: 'Anna Luberadzka-Kamińska',
-    he: 'Sebastian Szczepaniak'
+    she: '',
+    he: ''
   },
   wedding: {
-    date: Date(),
-    time: Date(),
-    place: 'A',
-    street: 'A',
-    city: 'A'
+    date: new Date(),
+    time: new Date(),
+    place: '',
+    street: '',
+    city: ''
   },
   weddingParty: {
     is: 'true',

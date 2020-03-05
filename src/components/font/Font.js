@@ -12,7 +12,7 @@ import FormControl from '@material-ui/core/FormControl';
 class Font extends React.Component {
 
   static propTypes = {
-    font: PropTypes.object
+    font: PropTypes.string
   }
 
   render() {

@@ -12,7 +12,7 @@ import FormControl from '@material-ui/core/FormControl';
 class Font extends React.Component {
 
   static propTypes = {
-    isWedding: PropTypes.bool
+    isWedding: PropTypes.string
   }
 
   render() {

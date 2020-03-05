@@ -16,7 +16,7 @@ import './background.scss';
 class Font extends React.Component {
 
   static propTypes = {
-    bcg: PropTypes.object
+    bcg: PropTypes.string
   }
 
   render() {
@@ -26,8 +26,8 @@ class Font extends React.Component {
       <div>
         <Subheading text="Wybór tła zaproszeń" />
         <Description>
-          <p>Wybierz tło dla zaproszeń</p>
-          <p class="p-small">Źródło grafik: <a href="https://www.vecteezy.com/free-vector/watercolor">Watercolor Vectors by Vecteezy</a>, <a href="https://www.vecteezy.com/free-vector/wedding-invite">Wedding Invite Vectors by Vecteezy</a></p>
+          <p>Wybierz tło dla zaproszeń. Jeśli nie wybierzesz żadnego z poniższych wzorów, zaproszenia będą na jednolitym, białym tle.</p><p>Możesz w tej sytuacji również użyć papieru z nadrukiem i na nim wydrukować zaproszenia, by nadać im unikalny charakter.</p>
+          <p className="p-small">Źródło grafik: <a href="https://www.vecteezy.com/free-vector/watercolor">Watercolor Vectors by Vecteezy</a>, <a href="https://www.vecteezy.com/free-vector/wedding-invite">Wedding Invite Vectors by Vecteezy</a></p>
         </Description>
 
         <FormControl component="fieldset" fullWidth>
