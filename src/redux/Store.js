@@ -24,11 +24,11 @@ const initialState = {
   },
   weddingParty: {
     is: 'true',
-    place: 'Restauracja ABC',
-    street: 'Krotoszyńska',
-    city: 'Warszawa'
+    place: '',
+    street: '',
+    city: ''
   },
-  info: 'abc'
+  info: ''
 }
 
 const reducers = {

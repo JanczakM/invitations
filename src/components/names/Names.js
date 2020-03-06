@@ -41,7 +41,7 @@ class Names extends React.Component {
           label='Imię i nazwisko panny młodej'
           variant='outlined'
           value={groomNames.she}
-          style={{ width: 500, marginBottom: '20px' }}
+          style={{ width: 250, margin: '10px' }}
           onChange={event => {addGroomNames.she(event.target.value); this.errors.she.error = false}}
           helperText='Pole wymagane'
           required
@@ -52,7 +52,7 @@ class Names extends React.Component {
           label='Imię i nazwisko pana młodego'
           variant='outlined'
           value={groomNames.he}
-          style={{ width: 500 }}
+          style={{ width: 250, margin: '10px' }}
           onChange={event => {addGroomNames.he(event.target.value); this.errors.he.error = false}}
           helperText='Pole wymagane'
           required

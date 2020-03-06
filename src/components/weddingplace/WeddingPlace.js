@@ -30,7 +30,7 @@ class WeddingPlace extends React.Component {
       <div>
         <Subheading text="Miejsce ślubu" />
         <Description>
-          <p>Poniżej podaj miejsce (czyli konkretny Kościół lub Urząd Stanu Cywilnego), ulicę oraz miejscowość w której odbędzie się ślub</p><p>Conajmniej jedno pole powinno być wypełnione</p>
+          <p>Poniżej podaj miejsce (czyli konkretny Kościół lub Urząd Stanu Cywilnego), ulicę oraz miejscowość w której odbędzie się ślub</p><p>Conajmniej jedno pole powinno być wypełnione.</p>
         </Description>
         <Grid container spacing={3} justify='center'>
           <Grid item>

@@ -26,8 +26,8 @@ class Font extends React.Component {
       <div>
         <Subheading text="Wybór tła zaproszeń" />
         <Description>
-          <p>Wybierz tło dla zaproszeń. Jeśli nie wybierzesz żadnego z poniższych wzorów, zaproszenia będą na jednolitym, białym tle.</p><p>Możesz w tej sytuacji również użyć papieru z nadrukiem i na nim wydrukować zaproszenia, by nadać im unikalny charakter.</p>
-          <p className="p-small">Źródło grafik: <a href="https://www.vecteezy.com/free-vector/watercolor">Watercolor Vectors by Vecteezy</a>, <a href="https://www.vecteezy.com/free-vector/wedding-invite">Wedding Invite Vectors by Vecteezy</a></p>
+          <p>Wybierz tło dla zaproszeń. Jeśli nie wybierzesz żadnego z poniższych wzorów, zaproszenia będą na jednolitym, białym tle.</p>
+          <p>Możesz pominąć wybór tła i wydrukować zaproszenia na papierze z gotowym tłem lub wzorami, by nadać zaproszeniom unikalny charakter.</p>
         </Description>
 
         <FormControl component="fieldset" fullWidth>
@@ -37,6 +37,10 @@ class Font extends React.Component {
             <FormControlLabel value="https://i.postimg.cc/9MRdkqXJ/bcg3.png" control={<Radio style={{display: 'none'}}/>} label={<img src={bcg3} alt='invitation background' className='bcg-img'/>}  />
           </RadioGroup>
         </FormControl>
+
+        <Description>
+          <p className="p-small">Źródło grafik: <a href="https://www.vecteezy.com/free-vector/watercolor">Watercolor Vectors by Vecteezy</a>, <a href="https://www.vecteezy.com/free-vector/wedding-invite">Wedding Invite Vectors by Vecteezy</a></p>
+        </Description>
 
         <Grid container spacing={3} justify='center'>
           <Grid item >

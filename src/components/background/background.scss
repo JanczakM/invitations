@@ -15,3 +15,9 @@
 .p-small {
   font-size: 10px;
 }
+
+@media only screen and (max-width: 720px) {
+  .bcg-img {
+    margin-bottom: 5px;
+  }
+}
