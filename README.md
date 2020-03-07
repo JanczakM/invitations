@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the wedding invitations creator. It enables users to enter their data, choosing backgrounds and fonts and download invitations in pdf format.
 
 ## Available Scripts
 
