@@ -28,34 +28,34 @@ class WeddingPlace extends React.Component {
 
     return (
       <div>
-        <Subheading text="Miejsce ślubu" />
+        <Subheading text='Miejsce ślubu' />
         <Description>
           <p>Poniżej podaj miejsce (czyli konkretny Kościół lub Urząd Stanu Cywilnego), ulicę oraz miejscowość w której odbędzie się ślub</p><p>Conajmniej jedno pole powinno być wypełnione.</p>
         </Description>
         <Grid container spacing={3} justify='center'>
           <Grid item>
             <TextField
-              id="outlined-basic"
-              label="miejsce ślubu"
-              variant="outlined"
+              id='outlined-basic'
+              label='miejsce ślubu'
+              variant='outlined'
               value={place}
               onChange={event => {addPlace(event.target.value); this.setState({display: 'none'})}}
             />
           </Grid>
           <Grid item>
             <TextField
-              id="outlined-basic"
-              label="ulica"
-              variant="outlined"
+              id='outlined-basic'
+              label='ulica'
+              variant='outlined'
               value={street}
               onChange={event => {addStreet(event.target.value); this.setState({display: 'none'})}}
             />
           </Grid>
           <Grid item>
             <TextField
-              id="outlined-basic"
-              label="miejscowość"
-              variant="outlined"
+              id='outlined-basic'
+              label='miejscowość'
+              variant='outlined'
               value={city}
               onChange={event => {addCity(event.target.value); this.setState({display: 'none'})}}
             />

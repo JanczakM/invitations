@@ -20,13 +20,13 @@ class Font extends React.Component {
 
     return(
       <div>
-        <Subheading text="Czy planujecie zorganizowanie wesela?" />
+        <Subheading text='Czy planujecie zorganizowanie wesela?' />
         <Description>
           <p>Czy planujecie wesele i chcecie zaprosić na nie gości?</p>
         </Description>
 
-        <FormControl component="fieldset">
-          <RadioGroup aria-label="wesele" name="isWedding" value={isWedding} onChange={event => addIsWedding(event.target.value)}>
+        <FormControl component='fieldset'>
+          <RadioGroup aria-label='wesele' name='isWedding' value={isWedding} onChange={event => addIsWedding(event.target.value)}>
             <FormControlLabel value='true' control={<Radio color='primary'/>} label='tak' />
             <FormControlLabel value='false' control={<Radio color='primary'/>} label='nie' />
           </RadioGroup>

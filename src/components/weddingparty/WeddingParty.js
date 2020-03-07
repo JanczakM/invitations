@@ -28,34 +28,34 @@ class WeddingParty extends React.Component {
 
     return (
       <div>
-        <Subheading text="Miejsce wesela" />
+        <Subheading text='Miejsce wesela' />
         <Description>
           <p>Poniżej podaj miejsce (czyli np. Restauracja ABC, ulica i miasto) w którym odbędzie się wesele</p>
         </Description>
         <Grid container spacing={3} justify='center'>
           <Grid item>
             <TextField
-              id="outlined-basic"
-              label="miejsce wesela"
-              variant="outlined"
+              id='outlined-basic'
+              label='miejsce wesela'
+              variant='outlined'
               value={place}
               onChange={event => {addPlace(event.target.value); this.setState({display: 'none'})}}
             />
           </Grid>
           <Grid item>
             <TextField
-              id="outlined-basic"
-              label="ulica"
-              variant="outlined"
+              id='outlined-basic'
+              label='ulica'
+              variant='outlined'
               value={street}
               onChange={event => {addStreet(event.target.value); this.setState({display: 'none'})}}
             />
           </Grid>
           <Grid item>
             <TextField
-              id="outlined-basic"
-              label="miejscowość"
-              variant="outlined"
+              id='outlined-basic'
+              label='miejscowość'
+              variant='outlined'
               value={city}
               onChange={event => {addCity(event.target.value); this.setState({display: 'none'})}}
             />

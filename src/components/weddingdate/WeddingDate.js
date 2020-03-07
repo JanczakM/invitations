@@ -38,20 +38,20 @@ class WeddingDate extends React.Component {
 
     return(
       <div>
-        <Subheading text="Data i godzina ślubu" />
+        <Subheading text='Data i godzina ślubu' />
         <Description>
           <p>Poniżej podaj datę i godzinę ślubu</p>
         </Description>
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
-          <Grid container justify="center" spacing={3}>
+          <Grid container justify='center' spacing={3}>
             <Grid item >
               <KeyboardDatePicker
                 {...this.errors.date}
                 disableToolbar
-                format="dd/MM/yyyy"
-                margin="normal"
-                id="date-picker-inline"
-                label="Data ślubu"
+                format='dd/MM/yyyy'
+                margin='normal'
+                id='date-picker-inline'
+                label='Data ślubu'
                 value={date}
                 onChange={addDate}
                 KeyboardButtonProps={{
@@ -64,9 +64,9 @@ class WeddingDate extends React.Component {
               <Grid item >
                 <KeyboardTimePicker
                   {...this.errors.time}
-                  margin="normal"
-                  id="time-picker"
-                  label="Godzina ślubu"
+                  margin='normal'
+                  id='time-picker'
+                  label='Godzina ślubu'
                   ampm={false}
                   value={time}
                   onChange={addTime}
