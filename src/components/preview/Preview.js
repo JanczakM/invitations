@@ -16,7 +16,7 @@ export const Preview = (props) => (
       <p>Jeżeli organizujesz wesele, poniżej zobaczysz zaproszenie w dwóch formach: dla osób, które chcesz zaprosić na wesele i ślub oraz dla tych, które chcesz zaprosić tylko na ślub</p>
     </Description>
     <div>
-      <PDFViewer height='500px'>
+      <PDFViewer width='80%' height='500'>
         <Invitation {...props}/>
       </PDFViewer>
     </div>

@@ -19,7 +19,7 @@ export const Print = (props) => (
     </PDFDownloadLink>
     <Grid container spacing={3} justify='center'>
       <Grid item >
-        <Next text='Wstecz' path='/podglad' type='prev'/>
+        <Next text='Wstecz' path={window.innerWidth <= 760 ? '/info' : '/podglad'} type='prev'/>
       </Grid>
     </Grid>
   </div>
